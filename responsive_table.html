@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- Responsive Table Demo-->
+<html lang="en">
+  	<head>
+	    <meta charset="UTF-8">
+	    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1" />
+	  	<title> Responsive Table Demo</title>
+		<style type="text/css">
+			#container{
+				width: 100%;
+			}
+			.table{ 
+				border-collapse: collapse;
+			    border-spacing: 0; 
+				width: 100%;
+				box-shadow: .5px 3px 3.5px rgba(25,25,25,.1);
+			}
+			#table-title h1,th,td{
+				font-family: "Josefin Sans", sans-serif;
+				letter-spacing: .05em;
+			}	
+			#table-title h1{
+				font-size: 2em;
+				color: rgb(56, 53, 96);
+				font-weight: 700;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			thead{
+				border-top: 1px solid rgb(0,0,0);
+				background: rgb(56, 53, 96);
+			}
+			th:hover{
+				border: 5px solid rgb(96, 103, 216);
+			}
+			#row-1{
+				background:  rgba(41, 81, 200, .6);
+			}
+			#row-1:hover{
+				border: 5px solid rgb(121, 131, 255);
+			}
+			#row-2{
+				background: rgba(255, 88, 27, .6);
+			}
+			#row-2:hover{
+				border: 5px solid rgb(249, 172, 43);
+			}
+			#row-3{
+				background: rgba(155, 90, 3, .6);
+			}
+			#row-3:hover{
+				border: 5px solid rgb(255, 190, 103);
+			}
+			#row-4{
+				background: rgba(90, 150, 102, .6);
+			}
+			#row-4:hover{
+				border: 5px solid rgb(190, 250, 202);
+			}
+			th,td{
+				font-weight: 600;
+				color: rgba(255,250,250,.95);
+				text-align: left;
+				padding: 5px;
+				border-top: 1px solid rgb(0,0,0);
+			}
+			th{
+				font-size: 2em;
+			}
+			td{
+				font-size: 1.2em;
+				word-wrap: normal;
+			  	-webkit-hyphens: none;
+			  	-moz-hyphens: none;
+			    hyphens: none;
+			    text-align: left;
+				width: 25%; 
+			}
+			td.first-of-row {
+				font-weight: 700;
+				padding-left: 10px ;
+				text-transform: uppercase;
+			}
+			@media screen and (max-width: 800px){
+				#table-title h1{
+					margin-top: 10%;
+				}
+				th{
+					font-size: 1.75em;
+				}
+				td{
+					font-size: 1.25em;
+					padding: 10px 25px;
+				}
+				.first-of-row{
+					padding: 15px 0;
+				}
+			}
+			@media screen and (max-width: 600px){
+				#table-title h1{
+					font-size: 1.75em;
+				}
+				tr{
+					border: none;
+				}
+				td{
+					width: 100%;
+					overflow-x: auto;
+					display: block;
+					text-align: center;
+					padding: 10px 0;
+				}
+				td.first-of-row{
+					padding-left: 0;
+				} 
+			}
+			@media screen and (max-width: 400px){
+				#table-title h1{
+					font-size: 1em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="table-title">
+			<h1>Wine, Cheese and Fruit</h1>
+		</div>
+		<div id="container">
+			<table id="wine-section" class="table">
+				<thead>
+					<tr>
+						<th colspan="4">Wine</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="row-1">
+						<td class="first-of-row">Whites</td>
+						<td>Riesling</td> 
+						<td>Sauvignon</td>
+						<td>Chardonney</td>
+					</tr>
+					<tr id="row-2">
+						<td class="first-of-row">Reds</td>
+						<td>Merlot</td>
+						<td>Chianti</td> 
+						<td>Cabernet</td>
+					</tr>
+					<tr id="row-3">
+						<td class="first-of-row">Sparkling</td>
+						<td>Prosecco</td> 
+						<td>Champagne</td>
+						<td>Espumante</td>
+					</tr>
+					<tr id="row-4">
+						<td class="first-of-row">Dessert</td>
+						<td>Madeira</td> 
+						<td>Lambrusco</td>
+						<td>Chenin Blanc</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="cheese-section" class="table">
+				<thead>
+					<tr>
+						<th colspan="4">Cheese</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="row-1">
+						<td class="first-of-row">Soft</td>
+						<td>Brie</td>
+						<td>Havarti</td>
+						<td>Neufchatel</td> 
+					</tr>
+					<tr id="row-2">
+						<td class="first-of-row">Hard</td>
+						<td>Edam</td>
+						<td>Cheddar</td>
+						<td>Gruyere</td> 
+					</tr>
+					<tr id="row-3">
+						<td class="first-of-row">Sweet</td>
+						<td>Burrata</td> 
+						<td>Camembert</td> 
+						<td>Mascarpone</td>
+					</tr>
+					<tr id="row-4">
+						<td class="first-of-row">Sharp</td>
+						<td>Blue</td>
+						<td>Limburger</td>
+						<td>Benedictine</td> 
+					</tr>
+				</tbody>
+			</table>
+			<table id="fruit-section" class="table">
+				<thead>
+					<tr>
+						<th id="fruit-title" colspan="5">Fruit</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="row-1">
+						<td class="first-of-row">Berries</td>
+						<td>Grapes</td>
+						<td>Raspberries</td> 
+						<td>Strawberries</td>
+					</tr>
+					<tr id="row-2">
+						<td class="first-of-row">Citrus</td>
+						<td>Oranges</td> 
+						<td>Grpefruit</td>
+						<td>Pineapple</td>
+					</tr>
+					<tr id="row-3">
+						<td class="first-of-row">Pome</td>
+						<td>Pears</td>
+						<td>Apples</td>
+						<td>Quince</td>
+					</tr>
+					<tr id="row-4">
+						<td class="first-of-row">Stone</td>
+						<td>Plums</td>
+						<td>Peaches</td>
+						<td>Cherries</td> 
+					</tr>
+				<tbody>
+			</table>
+		</div>
+	</body>
+</html>
+
